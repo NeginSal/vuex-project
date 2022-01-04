@@ -40,5 +40,12 @@ const store = createStore({
       state.products.forEach((product) => (product.price -= 1));
     },
   },
+  actions: {
+    reducePrice: (context) => {
+      setTimeout(function () {
+        context.commit("reducePrice");
+      }, 2000);
+    },
+  },
 });
 export default store;
